@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAR-RANKINGS | Independent Data-Driven Car Reviews &amp; Comparisons</title>
+    <meta name="description" content="Find the best cars with our independent, data-driven rankings and comparisons. Expert analysis of SUVs, sedans, trucks, EVs, and hybrids to help you make confident decisions." />
+    <meta name="author" content="CAR-RANKINGS" />
+
+    <meta property="og:title" content="CAR-RANKINGS | Independent Data-Driven Car Reviews" />
+    <meta property="og:description" content="Find the best cars with our independent, data-driven rankings and comparisons. Expert analysis of SUVs, sedans, trucks, EVs, and hybrids." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content=" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content=" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

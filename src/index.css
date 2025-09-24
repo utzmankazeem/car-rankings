@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CAR-RANKINGS Design System - Professional Automotive Platform */
+
+@layer base {
+  :root {
+    /* Core Brand Colors - Minimalist Luxury */
+    --background: 0 0% 99%;
+    --foreground: 240 6% 10%;
+    
+    /* Card & Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 240 6% 10%;
+    --card-hover: 0 0% 97%;
+    
+    /* Navigation & UI */
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 6% 10%;
+    
+    /* Primary Brand - Sophisticated Charcoal */
+    --primary: 240 6% 10%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 240 6% 15%;
+    
+    /* Secondary - Elegant Stone */
+    --secondary: 240 4% 96%;
+    --secondary-foreground: 240 6% 10%;
+    --secondary-hover: 240 4% 94%;
+    
+    /* Muted & Subtle */
+    --muted: 240 4% 96%;
+    --muted-foreground: 240 3% 46%;
+    
+    /* Accent - Luxury Platinum */
+    --accent: 214 32% 91%;
+    --accent-foreground: 240 6% 10%;
+    --accent-hover: 214 32% 88%;
+    
+    /* Rankings & Scores */
+    --score-excellent: 142 76% 36%;
+    --score-good: 54 91% 45%;
+    --score-average: 31 100% 50%;
+    --score-poor: 0 84% 60%;
+    
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --warning: 31 100% 50%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Borders & Inputs */
+    --border: 210 12% 88%;
+    --input: 210 12% 88%;
+    --ring: 210 100% 12%;
+    
+    /* Layout */
+    --radius: 0.75rem;
+    --header-height: 80px;
+    
+    /* Luxury Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(240 6% 10%) 0%, hsl(240 6% 15%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(240 4% 98%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(214 32% 91%) 0%, hsl(214 32% 88%) 100%);
+    
+    /* Shadows - Professional depth */
+    --shadow-card: 0 2px 12px hsl(210 12% 16% / 0.08);
+    --shadow-card-hover: 0 8px 32px hsl(210 12% 16% / 0.12);
+    --shadow-hero: 0 20px 60px hsl(210 100% 12% / 0.3);
+    
+    /* Typography Scale */
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    
+    /* Spacing Scale */
+    --section-padding: 6rem;
+    --container-padding: 2rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Hero Section */
+  .hero-section {
+    @apply bg-gradient-to-br from-primary to-primary-hover text-primary-foreground;
+    background-image: var(--gradient-hero);
+    box-shadow: var(--shadow-hero);
+  }
+  
+  /* Card Components */
+  .card-luxury {
+    @apply bg-card rounded-xl border-0;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-luxury:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+  }
+  
+  /* Score Badges */
+  .score-excellent {
+    @apply bg-green-500 text-white;
+    background-color: hsl(var(--score-excellent));
+  }
+  
+  .score-good {
+    @apply text-white;
+    background-color: hsl(var(--score-good));
+  }
+  
+  .score-average {
+    @apply text-white;
+    background-color: hsl(var(--score-average));
+  }
+  
+  .score-poor {
+    @apply text-white;
+    background-color: hsl(var(--score-poor));
+  }
+  
+  /* Button Variants */
+  .btn-luxury {
+    @apply bg-gradient-to-r from-accent to-accent-hover text-accent-foreground font-semibold px-8 py-4 rounded-lg;
+    background: var(--gradient-accent);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .btn-luxury:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px hsl(var(--accent) / 0.25);
+  }
+  
+  /* Navigation */
+  .nav-link {
+    @apply text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium;
+  }
+  
+  .nav-link.active {
+    @apply text-foreground;
+  }
+  
+  /* Animations */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+  
+  /* Container System */
+  .container-luxury {
+    @apply mx-auto px-6 lg:px-8 xl:px-12;
+    max-width: 1400px;
+  }
+  
+  /* Section Spacing */
+  .section-padding {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Gradient utilities */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  /* Shadow utilities */
+  .shadow-luxury {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-luxury-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+}
