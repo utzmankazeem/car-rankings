@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Search, Menu, X, Star, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import logo from "@/assets/logo.png";
 import {
   Sheet,
   SheetContent,
@@ -48,17 +49,21 @@ const Header = () => {
         <div className="flex items-center justify-between h-header">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center">
-              <BarChart3 className="w-6 h-6 text-accent-foreground" />
-            </div>
-            <div className="flex flex-col">
+            
+          <img 
+            src={logo} 
+            alt="Car Rankings Logo" 
+            className="w-[90px] h-[86px] object-contain"
+          />
+
+            {/* <div className="flex flex-col">
               <span className="text-xl font-heading font-bold text-foreground">
                 CAR-RANKINGS
               </span>
               <span className="text-xs text-muted-foreground -mt-1">
                 Independent • Data-Driven
               </span>
-            </div>
+            </div> */}
           </Link>
 
           {/* Desktop Navigation */}
@@ -96,11 +101,16 @@ const Header = () => {
           {/* Search & CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <SearchBox className="w-64" />
-            <Link to="/subscribe">
-              <Button className="btn-luxury">
-                Subscribe
-              </Button>
-            </Link>
+            <a
+              href="https://wa.me/2349034737321?text=Hi%20I%27m%20interested%20in%20your%20services"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            <Button className="btn-luxury">
+              Talk to an Expert
+            </Button>
+</a>
+
           </div>
 
           {/* Mobile Menu */}

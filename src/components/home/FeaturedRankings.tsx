@@ -110,7 +110,7 @@ const FeaturedRankings = () => {
 
         <div className="text-center">
           <Link to="/rankings">
-            <Button size="lg" className="btn-luxury">
+            <Button size="lg" className="rounded-md px-10 py-2 bg-white border border-black hover:shadow-md text-black hover:text-white" >
               Explore All Rankings
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>

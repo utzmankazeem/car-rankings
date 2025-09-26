@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { BarChart3, Mail, FileText, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const footerLinks = {
@@ -36,34 +37,36 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-muted/30 border-t border-border">
+    <footer className="bg-black border-t border-border text-white">
       <div className="container-luxury section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Brand & Newsletter */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center">
-                <BarChart3 className="w-6 h-6 text-accent-foreground" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-heading font-bold text-foreground">
+            <img 
+              src={logo} 
+              alt="Car Rankings Logo" 
+              className="w-[117px] h-[113px] object-contain"
+            />
+              {/* <div className="flex flex-col">
+                <span className="text-lg font-heading font-bold text-white">
                   CAR-RANKINGS
                 </span>
-                <span className="text-xs text-muted-foreground -mt-1">
+                <span className="text-xs text-white -mt-1">
                   Independent • Data-Driven
                 </span>
-              </div>
+              </div> */}
             </Link>
             
-            <p className="text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-white mb-6 font-regular">
               Independent, data-driven car rankings and comparisons to help you find the best cars across all categories.
             </p>
             
             <div className="space-y-4">
-              <h3 className="font-heading font-semibold text-foreground">
+              {/* <h3 className="font-regular font-semibold text-white">
                 Stay Updated
-              </h3>
-              <div className="flex space-x-2">
+              </h3> */}
+              {/* <div className="flex space-x-2">
                 <Input
                   placeholder="Enter your email"
                   className="flex-1"
@@ -71,16 +74,16 @@ const Footer = () => {
                 <Button className="bg-primary hover:bg-primary-hover">
                   <Mail className="w-4 h-4" />
                 </Button>
-              </div>
-              <p className="text-sm text-muted-foreground">
+              </div> */}
+              {/* <p className="text-sm text-muted-foreground">
                 Get weekly car news, rankings, and buying guides.
-              </p>
+              </p> */}
             </div>
           </div>
 
           {/* Categories */}
           <div>
-            <h3 className="font-heading font-semibold text-foreground mb-4">
+            <h3 className="font-heading font-semibold text-white mb-4">
               Categories
             </h3>
             <ul className="space-y-3">
@@ -88,7 +91,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                    className="text-white hover:text-gray-300 transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -99,7 +102,7 @@ const Footer = () => {
 
           {/* Rankings */}
           <div>
-            <h3 className="font-heading font-semibold text-foreground mb-4">
+            <h3 className="font-heading font-semibold text-white mb-4">
               Top Rankings
             </h3>
             <ul className="space-y-3">
@@ -107,7 +110,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                    className="text-white hover:text-gray-300 transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -118,7 +121,7 @@ const Footer = () => {
 
           {/* Tools */}
           <div>
-            <h3 className="font-heading font-semibold text-foreground mb-4">
+            <h3 className="font-heading font-semibold text-white mb-4">
               Tools & Guides
             </h3>
             <ul className="space-y-3">
@@ -126,7 +129,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                    className="text-white hover:text-gray-300 transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -137,7 +140,7 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h3 className="font-heading font-semibold text-foreground mb-4">
+            <h3 className="font-heading font-semibold text-white mb-4">
               Company
             </h3>
             <ul className="space-y-3">
@@ -145,7 +148,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                    className="text-white hover:text-gray-300 transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -158,19 +161,19 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-6 text-sm text-muted-foreground">
+            <div className="flex items-center space-x-6 text-sm text-white">
               <span>© 2025 CAR-RANKINGS. All rights reserved.</span>
-              <Link to="/privacy" className="hover:text-foreground transition-colors flex items-center space-x-1">
+              <Link to="/privacy" className="hover:text-white transition-colors flex items-center space-x-1">
                 <Shield className="w-3 h-3" />
                 <span>Privacy</span>
               </Link>
-              <Link to="/terms" className="hover:text-foreground transition-colors flex items-center space-x-1">
+              <Link to="/terms" className="hover:text-white transition-colors flex items-center space-x-1">
                 <FileText className="w-3 h-3" />
                 <span>Terms</span>
               </Link>
             </div>
             
-            <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+            <div className="flex items-center space-x-4 text-sm text-white">
               <span>Powered by Next-IT Services</span>
               <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
             </div>

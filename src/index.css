@@ -193,7 +193,7 @@
   /* Button Variants */
   .btn-luxury {
     @apply bg-gradient-to-r from-accent to-accent-hover text-accent-foreground font-semibold px-8 py-4 rounded-lg;
-    background: var(--gradient-accent);
+    background: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
